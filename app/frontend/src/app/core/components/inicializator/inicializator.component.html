@@ -1,0 +1,17 @@
+<main>
+    <div class="filters-div" mat-raised-button (click)="openDialog()">
+        <span class="btn">Filters</span>
+        <mat-icon fontIcon="tune"></mat-icon>
+    </div>
+
+    <div *ngIf="!start_btn_clicked"    class="circle" (click)="set_school_search()"
+        mat-raised-button
+        matTooltip="please,select filters before pressing start!"
+        matTooltipClass="example-tooltip-uppercase"
+        aria-label="Button that shows a red tooltip"
+        >
+        <span class="btn">start</span>
+    </div>
+    <mat-spinner class="custom-spinner" strokeWidth="28"  *ngIf="start_btn_clicked" [diameter]="180"></mat-spinner>
+   
+</main>

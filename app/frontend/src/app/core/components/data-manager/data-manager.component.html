@@ -1,0 +1,28 @@
+<main *ngIf="this.receivedData" >
+
+    <div class="btn-data">
+        <span>Found </span>
+        <span>Schools</span>
+        <span class="fonte_status">{{this.receivedData.number_schools}}</span>
+        <mat-icon fontIcon="chevron_right">
+        </mat-icon>
+    </div>
+    <div class="btn-data" (click)="downloadFile()">
+       <span>
+        Download
+      </span>
+      <span>
+        File
+      </span>
+        <mat-icon fontIcon="download">
+        </mat-icon>
+
+    </div>
+    <div class="btn-data">
+        <span>Found </span><span>Errors</span><span class="fonte_status">{{this.receivedData.number_not_found_schools}}</span>
+        <mat-icon fontIcon="chevron_right">
+
+        </mat-icon>
+    </div>
+</main>
+
